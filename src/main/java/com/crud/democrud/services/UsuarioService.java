@@ -44,5 +44,15 @@ public class UsuarioService {
     }
 
 
+    public boolean eliminarUsuarioEmail(String email) {
+        try{
+            ArrayList<UsuarioModel> usuarioModel = usuarioRepository.findByEmail(email);
+            usuarioRepository.deleteById((Long)usuarioModel.get(0).getId());
+            System.out.println("id "+usuarioModel.get(0).getId());
+            return true;
+        }catch(Exception err){
+            return false;
+        }
+    }
     
 }
