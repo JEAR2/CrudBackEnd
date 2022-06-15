@@ -35,7 +35,13 @@ public class UsuarioServiceTest {
         assertThat(usuarioModelBuscado.get().getId()).isEqualTo(idBuscado);
     }
 
-
+    @Test
+    public void testBuscarUsuarioPorEmail(){
+        UsuarioModel usuarioModel=new UsuarioModel("aquaman","aqua@gmail.com",99);
+        UsuarioModel usuarioModelRegistrado = usuarioRepository.save(usuarioModel);
+        ArrayList<UsuarioModel> usuarioModelBuscado=usuarioRepository.findByEmail(usuarioModel.getEmail());
+        assertThat(usuarioModelBuscado.get(0).getEmail()).isEqualTo(usuarioModel.getEmail());
+    }
 
     @Test
     public void testListarUsuarios(){
