@@ -8,6 +8,6 @@ para este ejemplo se usaron las siguientes credenciales --
  -- 
  Se debe tener en cuenta que si se realiza el cambio del puerto, de igual forma se debe realizar en cambio en el repositorio del frontend en el archivo cliente.js linea 2 para el correcto funcionamiento
  -- 
- Repositorio de FrontEnd: https://github.com/JEAR2/crud-JSvanilla-springboot
+ Repositorio de FrontEnd: https://github.com/JEAR2/crudFrontEnd
  
  
